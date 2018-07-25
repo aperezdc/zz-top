@@ -1,5 +1,7 @@
-: ${ZZ_TOP:=${0:A:h}}
+# Copyright (C) Adrian Perez de Castro <aperez@igalia.com>
+# Distributed under the terms of the MIT license.
 
+: ${ZZ_TOP:=${0:A:h}}
 declare -A ZZ_TOP_LOCO
 
 zmodload zsh/zutil
