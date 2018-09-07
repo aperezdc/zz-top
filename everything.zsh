@@ -65,7 +65,7 @@ function zz-top--loco
 function zz-top--recycler
 {
 	emulate -L zsh
-	setopt local_options err_return nullglob
+	setopt err_return nullglob
 
 	local plugdir confdir name
 	local curdir=$(pwd)
@@ -103,7 +103,7 @@ function zz-top--recycler
 function zz-top
 {
 	emulate -L zsh
-	setopt local_options err_return
+	setopt err_return
 
 	if [[ $# -eq 0 ]] ; then
 		zz-top --recycler
