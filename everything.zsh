@@ -34,6 +34,11 @@ function zz-top--antenna
 #
 function zz-top--fandango
 {
+	emulate -L zsh
+
+	fpath+=( "$2" )
+	autoload -U "$2"/*(.:t)
+
 	if [[ -d $2/functions ]] ; then
 		fpath+=( "$2/functions" )
 		autoload -U "$2/functions"/*(.:t)
