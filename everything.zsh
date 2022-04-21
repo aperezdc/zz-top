@@ -44,9 +44,9 @@ function zz-top--fandango
 		autoload -U "$2/functions"/*(.:t)
 	fi
 
-	local -a candidates=( "$2/$1.plugin.zsh" "$2/$1.zsh" )
+	local -a candidates=( "$2"/*.plugin.zsh "$2/$1.zsh" )
 	if [[ $1 = zsh-* ]] ; then
-		candidates+=( "$2/${1#zsh-}.plugin.zsh" "$2/${1#zsh-}.zsh" )
+		candidates+=( "$2/${1#zsh-}.zsh" )
 	fi
 
 	local p
