@@ -82,10 +82,10 @@ function zz-top--recycler
 		local url=$(< "${confdir}/cloneurl")
 		if [[ -r ${confdir}/pending || ! -r ${plugdir}/.git/config ]] ; then
 			zz-top --iii 'Installing:' "[35m${name}[0m · [30;1m${url}[0;0m"
-			rm -rf "${plugdir}"
+			command rm -rf "${plugdir}"
 			git clone --recurse-submodules --depth=1 "${url}" "${plugdir}" \
 				|| continue
-			rm "${confdir}/pending"
+			command rm "${confdir}/pending"
 		elif [[ -e ${confdir}/frozen ]] ; then
 			zz-top --iii 'Skipping:' "[35m${name}[0m · [1;33mfrozen[0;0m"
 		else
